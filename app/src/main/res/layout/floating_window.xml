@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/floatingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是悬浮窗"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

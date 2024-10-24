@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HideFloatingWindow</string>
+    <string name="show_floating_window">显示悬浮窗</string>
+</resources>
