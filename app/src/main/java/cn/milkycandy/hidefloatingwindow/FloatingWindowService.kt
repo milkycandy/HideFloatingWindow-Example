@@ -50,10 +50,18 @@ class FloatingWindowService : Service() {
                 .apply { isAccessible = true }
                 .invoke(floatingView) ?: return
 
+            viewRoot.javaClass.declaredFields.forEach { field ->
+                field.isAccessible = true
+                Log.d(TAG, "Field: ${field.name}, Type: ${field.type}")
+            }
+
+            viewRoot.javaClass.declaredMethods.forEach { method ->
+                Log.d(TAG, "Method: ${method.name}")
+            }
+
             val surfaceControl = viewRoot.javaClass.getDeclaredField("mSurfaceControl")
                 .apply { isAccessible = true }
                 .get(viewRoot)
-
             val transactionClass = Class.forName("android.view.SurfaceControl\$Transaction")
             val transaction = transactionClass.getDeclaredConstructor().newInstance()
 
